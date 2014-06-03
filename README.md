@@ -30,4 +30,4 @@ Content will be parsed as markdown.
 
 If routing is successful to a page entity found by active flag and path property,
 page content will be responsed in a new view model. Otherwise it will set 404 status code
-to http response
+to http response object.

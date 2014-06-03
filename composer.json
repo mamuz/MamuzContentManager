@@ -1,5 +1,5 @@
 {
-    "name"             : "mamuz/MamuzContentManager",
+    "name"             : "mamuz/mamuz-content-manager",
     "description"      : "Content Provider",
     "keywords"         : ["mamuz", "cms"],
     "authors"          : [

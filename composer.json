@@ -24,10 +24,8 @@
         "neilime/zf2-twb-bundle"      : "2.*@stable"
     },
     "require-dev"      : {
-        "satooshi/php-coveralls"   : "dev-master",
-        "phpunit/phpunit"          : "4.1.*",
-        "mockery/mockery"          : "0.9.*",
-        "phpmd/phpmd"              : "2.0.*",
-        "squizlabs/php_codesniffer": "2.0.*@dev"
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit"       : "4.1.*",
+        "mockery/mockery"       : "0.9.*"
     }
 }

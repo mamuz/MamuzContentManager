@@ -40,15 +40,11 @@ class QueryControllerTest extends \PHPUnit_Framework_TestCase
     {
         $this->queryInterface = \Mockery::mock('MamuzContentManager\Feature\QueryInterface');
 
-        /** @var \Zend\ServiceManager\ServiceManager $serviceManager */
-        $serviceManager = Bootstrap::getServiceManager();
         $this->fixture = new QueryController($this->queryInterface);
         $this->request = new Request();
         $this->routeMatch = new RouteMatch(array('controller' => 'index'));
         $this->event = new MvcEvent();
-        $config = $serviceManager->get('Config');
-        $routerConfig = isset($config['router']) ? $config['router'] : array();
-        $router = HttpRouter::factory($routerConfig);
+        $router = HttpRouter::factory();
 
         $params = \Mockery::mock('Zend\Mvc\Controller\Plugin\Params');
         $params->shouldReceive('__invoke')->andReturn($params);
@@ -60,7 +56,6 @@ class QueryControllerTest extends \PHPUnit_Framework_TestCase
         $this->event->setRouter($router);
         $this->event->setRouteMatch($this->routeMatch);
         $this->fixture->setEvent($this->event);
-        $this->fixture->setServiceLocator($serviceManager);
     }
 
     public function testExtendingZendActionController()

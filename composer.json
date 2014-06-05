@@ -1,17 +1,14 @@
 {
     "name"             : "mamuz/mamuz-content-manager",
-    "description"      : "Content Provider",
+    "type"             : "library",
+    "description"      : "Provides simple content manager.",
+    "homepage"         : "https://github.com/mamuz/MamuzContentManager",
+    "license"          : "MIT",
     "keywords"         : ["mamuz", "cms"],
     "authors"          : [
         {
             "name" : "Marco Muths",
             "email": "muzzi_is@web.de"
-        }
-    ],
-    "repositories"     : [
-        {
-            "type": "composer",
-            "url" : "http://packages.zendframework.com/"
         }
     ],
     "minimum-stability": "dev",
@@ -27,5 +24,10 @@
         "satooshi/php-coveralls": "dev-master",
         "phpunit/phpunit"       : "4.1.*",
         "mockery/mockery"       : "0.9.*"
+    },
+    "autoload"         : {
+        "psr-0": {
+            "MamuzContentManager\\": "src/"
+        }
     }
 }

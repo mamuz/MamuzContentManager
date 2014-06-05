@@ -5,6 +5,11 @@
 [![Coverage Status](https://coveralls.io/repos/mamuz/MamuzContentManager/badge.png?branch=master)](https://coveralls.io/r/mamuz/MamuzContentManager?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/?branch=master)
 
+[![Latest Stable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/stable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
+[![Total Downloads](https://poser.pugx.org/mamuz/mamuz-content-manager/downloads.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
+[![Latest Unstable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/unstable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
+[![License](https://poser.pugx.org/mamuz/mamuz-content-manager/license.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
+
 ## Installation
 
 Run doctrine orm command line to create database table:

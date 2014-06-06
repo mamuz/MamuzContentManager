@@ -50,7 +50,7 @@ class Module implements
         $serviceListener = $sm->get('ServiceListener');
 
         $serviceListener->addServiceManager(
-            'MamuzContentManager\DomainManager ',
+            'MamuzContentManager\DomainManager',
             'content_manager_domain',
             'MamuzContentManager\DomainManager\ProviderInterface',
             'getContentManagerDomainConfig'

@@ -17,7 +17,7 @@
         "php"                         : ">=5.4",
         "zendframework/zendframework" : "~2.3.1",
         "doctrine/doctrine-orm-module": "0.*",
-        "maglnet/magl-markdown"       : "1.*",
+        "maglnet/magl-markdown"       : "1.*"
     },
     "require-dev"      : {
         "satooshi/php-coveralls": "dev-master",

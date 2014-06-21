@@ -48,13 +48,13 @@ Create database tables with command line tool provided by
 
 ### Dump the sql to fire it manually
 ```sh
-./vendor/bin/doctrine-module  orm:schema-tool:update --dump-sql
+./vendor/bin/doctrine-module orm:schema-tool:update --dump-sql
 ```
 
 ### Fire sql automaticly
 
 ```sh
-./vendor/bin/doctrine-module  orm:schema-tool:update --force
+./vendor/bin/doctrine-module orm:schema-tool:update --force
 ```
 
 ## Configuration

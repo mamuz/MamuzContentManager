@@ -10,6 +10,12 @@
 [![Latest Unstable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/unstable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 [![License](https://poser.pugx.org/mamuz/mamuz-content-manager/license.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 
+## Domain
+
+ - This module provides a simple content management system.
+ - Pages are persisted in a database and accessable by ZF2 routes.
+ - Content for these pages will be parsed as markdown.
+
 ## Installation
 
 The recommended way to install
@@ -37,7 +43,7 @@ After that run `composer update` and enable this module for ZF2 by adding
 This module is based on [`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule)
 and be sure that you have already [configured database connection](https://github.com/doctrine/DoctrineORMModule).
 
-Create databas tables with command line tool provided by
+Create database tables with command line tool provided by
 [`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule):
 
 ### Dump the sql to fire it manually
@@ -54,7 +60,7 @@ Create databas tables with command line tool provided by
 ## Configuration
 
 This module is already configured out of the box, but you can overwrite it by
-adding an config file in `./config/autoload` directory.
+adding a config file in `./config/autoload` directory.
 For default configuration see
 [`module.config.php`](https://github.com/mamuz/MamuzContentManager/blob/master/config/module.config.php)
 

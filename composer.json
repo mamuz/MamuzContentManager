@@ -1,7 +1,7 @@
 {
     "name"             : "mamuz/mamuz-content-manager",
     "type"             : "library",
-    "description"      : "Provides simple content manager.",
+    "description"      : "Provides simple content manager for ZF2 with Doctrine",
     "homepage"         : "https://github.com/mamuz/MamuzContentManager",
     "license"          : "MIT",
     "keywords"         : ["mamuz", "cms"],

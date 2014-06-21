@@ -4,7 +4,7 @@
     "description"      : "Provides simple content manager for ZF2 with Doctrine",
     "homepage"         : "https://github.com/mamuz/MamuzContentManager",
     "license"          : "MIT",
-    "keywords"         : ["mamuz", "cms"],
+    "keywords"         : ["mamuz", "cms", "markdown", "zf2", "doctrine"],
     "authors"          : [
         {
             "name" : "Marco Muths",

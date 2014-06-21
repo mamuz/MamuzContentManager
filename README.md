@@ -1,7 +1,7 @@
 # MamuzContentManager
 
 [![Build Status](https://travis-ci.org/mamuz/MamuzContentManager.svg?branch=master)](https://travis-ci.org/mamuz/MamuzContentManager)
-[![Dependency Status](https://www.versioneye.com/user/projects/538f789246c473958600002c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/538f789246c473958600002c)
+[![Dependency Status](https://www.versioneye.com/user/projects/538f789246c473958600002c/badge.svg)](https://www.versioneye.com/user/projects/538f789246c473958600002c)
 [![Coverage Status](https://coveralls.io/repos/mamuz/MamuzContentManager/badge.png?branch=master)](https://coveralls.io/r/mamuz/MamuzContentManager?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/?branch=master)
 

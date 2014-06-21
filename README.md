@@ -12,32 +12,59 @@
 
 ## Installation
 
-Run doctrine orm command line to create database table:
+The recommended way to install
+[`mamuz/mamuz-content-manager`](https://packagist.org/packages/mamuz/mamuz-content-manager) is through
+[composer](http://getcomposer.org/) by adding dependency to your `composer.json`:
 
-Dump the sql..
+```json
+{
+    "require": {
+        "mamuz/mamuz-content-manager": "0.*"
+    }
+}
+```
+
+After that run `composer update` and enable this module for ZF2 by adding
+`MamuzContentManager` to the `modules` key in `./config/application.config.php`:
+
+```php
+// ...
+    'modules' => array(
+        'MamuzContentManager',
+    ),
+```
+
+This module is based on [`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule)
+and be sure that you have already [configured database connection](https://github.com/doctrine/DoctrineORMModule).
+
+Create databas tables with command line tool provided by
+[`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule):
+
+### Dump the sql to fire it manually
 ```sh
 ./vendor/bin/doctrine-module  orm:schema-tool:update --dump-sql
 ```
-Force update
+
+### Fire sql automaticly
+
 ```sh
 ./vendor/bin/doctrine-module  orm:schema-tool:update --force
-```
-In usage of environment variable..
-```sh
-export APPLICATION_ENV=development; ./vendor/bin/doctrine-module  orm:schema-tool:update
 ```
 
 ## Configuration
 
-Change routing in module config, which will be resolved to path property of page entity.
+This module is already configured out of the box, but you can overwrite it by
+adding an config file in `./config/autoload` directory.
+For default configuration see
+[`module.config.php`](https://github.com/mamuz/MamuzContentManager/blob/master/config/module.config.php)
 
 ## Creating new Pages
 
-Create new entities in page database table and set page content to content property.
+Create new entities in `MamuzPage` database table.
 Content will be parsed as markdown.
 
 ## Workflow
 
 If routing is successful to a page entity found by active flag and path property,
-page content will be responsed in a new view model. Otherwise it will set 404 status code
+page content will be responsed in a new view model. Otherwise it will set a 404 status code
 to http response object.

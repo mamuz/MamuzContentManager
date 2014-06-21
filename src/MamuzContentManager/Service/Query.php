@@ -3,13 +3,9 @@
 namespace MamuzContentManager\Service;
 
 use MamuzContentManager\Feature\QueryInterface;
-use Zend\EventManager\EventManagerAwareInterface;
-use Zend\EventManager\EventManagerAwareTrait;
 
-class Query implements EventManagerAwareInterface, QueryInterface
+class Query implements QueryInterface
 {
-    use EventManagerAwareTrait;
-
     /** @var QueryInterface */
     private $mapper;
 

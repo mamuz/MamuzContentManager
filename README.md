@@ -14,7 +14,7 @@
 
  - This module provides a simple content management system.
  - Pages are persisted in a database and accessable by ZF2 routes.
- - Content for these pages will be parsed as markdown.
+ - Markdown is supported for page content.
 
 ## Installation
 
@@ -67,10 +67,10 @@ For default configuration see
 ## Creating new Pages
 
 Create new entities in `MamuzPage` database table.
-Content will be parsed as markdown.
+Content will be rendered with a markdown parser.
 
 ## Workflow
 
-If routing is successful to a page entity found by active flag and path property,
+If routing is successful to a page entity found by active flag and path argument,
 page content will be responsed in a new view model. Otherwise it will set a 404 status code
 to http response object.

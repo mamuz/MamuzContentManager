@@ -3,7 +3,6 @@
 namespace MamuzContentManagerTest\Controller;
 
 use MamuzContentManager\Controller\QueryController;
-use MamuzContentManagerTest\Bootstrap;
 use Zend\Http\PhpEnvironment\Request;
 use Zend\Http\PhpEnvironment\Response;
 use Zend\Mvc\MvcEvent;

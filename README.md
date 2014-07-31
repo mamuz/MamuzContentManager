@@ -4,6 +4,7 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/538f789246c473958600002c/badge.svg)](https://www.versioneye.com/user/projects/538f789246c473958600002c)
 [![Coverage Status](https://coveralls.io/repos/mamuz/MamuzContentManager/badge.png?branch=master)](https://coveralls.io/r/mamuz/MamuzContentManager?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/91b1b958-582d-49ee-b5af-699597c5de95/mini.png)](https://insight.sensiolabs.com/projects/91b1b958-582d-49ee-b5af-699597c5de95)
 
 [![Latest Stable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/stable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 [![Total Downloads](https://poser.pugx.org/mamuz/mamuz-content-manager/downloads.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)

@@ -35,7 +35,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
             ->shouldReceive('findOneBy')
             ->with(
                 array(
-                    'path'   => $path,
+                    'path'      => $path,
                     'published' => true,
                 )
             )
@@ -51,7 +51,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
             ->shouldReceive('findOneBy')
             ->with(
                 array(
-                    'path'   => $path,
+                    'path'      => $path,
                     'published' => true,
                 )
             )

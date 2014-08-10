@@ -28,14 +28,14 @@ class QueryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('MamuzContentManager\Feature\QueryInterface', $this->fixture);
     }
 
-    public function testFindActivePageByPath()
+    public function testFindPublishedPageByPath()
     {
         $path = 'foo';
         $this->mapper
-            ->shouldReceive('findActivePageByPath')
+            ->shouldReceive('findPublishedPageByPath')
             ->with($path)
             ->andReturn($this->entity);
 
-        $this->assertSame($this->entity, $this->fixture->findActivePageByPath($path));
+        $this->assertSame($this->entity, $this->fixture->findPublishedPageByPath($path));
     }
 }

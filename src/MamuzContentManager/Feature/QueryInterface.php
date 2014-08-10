@@ -10,5 +10,5 @@ interface QueryInterface
      * @param string $path
      * @return Page
      */
-    public function findActivePageByPath($path);
+    public function findPublishedPageByPath($path);
 }

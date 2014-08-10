@@ -56,10 +56,10 @@ class Page
     /**
      * @ORM\Column(type="boolean", nullable=false)
      * @Annotation\Filter({"name":"Boolean"})
-     * @Annotation\Options({"label":"Active"})
+     * @Annotation\Options({"label":"Publish"})
      * @var bool
      */
-    private $active = false;
+    private $published = false;
 
     /**
      * destroy identity
@@ -143,20 +143,20 @@ class Page
     }
 
     /**
-     * @param boolean $active
+     * @param boolean $published
      * @return Page
      */
-    public function setActive($active)
+    public function setPublished($published)
     {
-        $this->active = $active;
+        $this->published = $published;
         return $this;
     }
 
     /**
      * @return boolean
      */
-    public function isActive()
+    public function isPublished()
     {
-        return $this->active;
+        return $this->published;
     }
 }

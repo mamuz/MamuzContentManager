@@ -73,6 +73,6 @@ Content will be rendered with a markdown parser.
 
 ## Workflow
 
-If routing is successful to a page entity found by active flag and path argument,
+If routing is successful to a page entity found by published flag and path argument,
 page content will be responsed in a new view model. Otherwise it will set a 404 status code
 to http response object.

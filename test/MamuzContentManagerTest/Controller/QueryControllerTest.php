@@ -69,7 +69,7 @@ class QueryControllerTest extends \PHPUnit_Framework_TestCase
         $this->page->shouldReceive('getContent')->andReturn($content);
 
         $this->queryInterface
-            ->shouldReceive('findActivePageByPath')
+            ->shouldReceive('findPublishedPageByPath')
             ->with($this->path)
             ->andReturn($this->page);
 
@@ -87,7 +87,7 @@ class QueryControllerTest extends \PHPUnit_Framework_TestCase
         $this->page = \Mockery::mock('MamuzContentManager\Entity\NullPage');
 
         $this->queryInterface
-            ->shouldReceive('findActivePageByPath')
+            ->shouldReceive('findPublishedPageByPath')
             ->with($this->path)
             ->andReturn($this->page);
 

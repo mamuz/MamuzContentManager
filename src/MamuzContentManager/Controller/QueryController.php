@@ -30,7 +30,7 @@ class QueryController extends AbstractActionController
     public function pageAction()
     {
         $path = $this->params()->fromRoute('path');
-        $page = $this->queryService->findActivePageByPath(trim($path, '/'));
+        $page = $this->queryService->findPublishedPageByPath(trim($path, '/'));
 
         if ($page instanceof NullPage) {
             /** @var Response $response */

@@ -19,12 +19,12 @@ class Query implements QueryInterface
         $this->repository = $repository;
     }
 
-    public function findActivePageByPath($path)
+    public function findPublishedPageByPath($path)
     {
         $page = $this->repository->findOneBy(
             array(
-                'path'   => $path,
-                'active' => true,
+                'path'      => $path,
+                'published' => true,
             )
         );
 

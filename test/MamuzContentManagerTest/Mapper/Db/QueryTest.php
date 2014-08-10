@@ -28,7 +28,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('MamuzContentManager\Feature\QueryInterface', $this->fixture);
     }
 
-    public function testFindActivePageByPath()
+    public function testFindPublishedPageByPath()
     {
         $path = 'foo';
         $this->entityRepository
@@ -36,15 +36,15 @@ class QueryTest extends \PHPUnit_Framework_TestCase
             ->with(
                 array(
                     'path'   => $path,
-                    'active' => true,
+                    'published' => true,
                 )
             )
             ->andReturn($this->entity);
 
-        $this->assertSame($this->entity, $this->fixture->findActivePageByPath($path));
+        $this->assertSame($this->entity, $this->fixture->findPublishedPageByPath($path));
     }
 
-    public function testFindActivePageByPathWithNullPage()
+    public function testFindPublishedPageByPathWithNullPage()
     {
         $path = 'foo';
         $this->entityRepository
@@ -52,14 +52,14 @@ class QueryTest extends \PHPUnit_Framework_TestCase
             ->with(
                 array(
                     'path'   => $path,
-                    'active' => true,
+                    'published' => true,
                 )
             )
             ->andReturn(null);
 
         $this->assertInstanceOf(
             'MamuzContentManager\Entity\NullPage',
-            $this->fixture->findActivePageByPath($path)
+            $this->fixture->findPublishedPageByPath($path)
         );
     }
 }

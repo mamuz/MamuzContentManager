@@ -1,22 +1,22 @@
 # MamuzContentManager
 
 [![Build Status](https://travis-ci.org/mamuz/MamuzContentManager.svg?branch=master)](https://travis-ci.org/mamuz/MamuzContentManager)
-[![Dependency Status](https://www.versioneye.com/user/projects/538f789246c473958600002c/badge.svg)](https://www.versioneye.com/user/projects/538f789246c473958600002c)
 [![Coverage Status](https://coveralls.io/repos/mamuz/MamuzContentManager/badge.png?branch=master)](https://coveralls.io/r/mamuz/MamuzContentManager?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mamuz/MamuzContentManager/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/91b1b958-582d-49ee-b5af-699597c5de95/mini.png)](https://insight.sensiolabs.com/projects/91b1b958-582d-49ee-b5af-699597c5de95)
 [![HHVM Status](http://hhvm.h4cc.de/badge/mamuz/mamuz-content-manager.png)](http://hhvm.h4cc.de/package/mamuz/mamuz-content-manager)
+[![Dependency Status](https://www.versioneye.com/user/projects/538f789246c473958600002c/badge.svg)](https://www.versioneye.com/user/projects/538f789246c473958600002c)
 
 [![Latest Stable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/stable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
-[![Total Downloads](https://poser.pugx.org/mamuz/mamuz-content-manager/downloads.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 [![Latest Unstable Version](https://poser.pugx.org/mamuz/mamuz-content-manager/v/unstable.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
+[![Total Downloads](https://poser.pugx.org/mamuz/mamuz-content-manager/downloads.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 [![License](https://poser.pugx.org/mamuz/mamuz-content-manager/license.svg)](https://packagist.org/packages/mamuz/mamuz-content-manager)
 
-## Domain
+## Features
 
- - This module provides a simple content management system.
- - Pages are persisted in a database and accessable by ZF2 routes.
- - Markdown is supported for page content.
+ - This module provides a CMS based on ZF2 and Doctrine2.
+ - Pages are persistent in repository and accessable by ZF2 routes.
+ - Pages are rendered by a markdown parser.
 
 ## Installation
 
@@ -48,31 +48,38 @@ and be sure that you have already [configured database connection](https://githu
 Create database tables with command line tool provided by
 [`DoctrineORMModule`](https://github.com/doctrine/DoctrineORMModule):
 
-### Dump the sql to fire it manually
 ```sh
-./vendor/bin/doctrine-module orm:schema-tool:update --dump-sql
-```
-
-### Fire sql automaticly
-
-```sh
-./vendor/bin/doctrine-module orm:schema-tool:update --force
+./vendor/bin/doctrine-module orm:schema-tool:update
 ```
 
 ## Configuration
 
-This module is already configured out of the box, but you can overwrite it by
+This module is usable out of the box, but you can overwrite default configuration by
 adding a config file in `./config/autoload` directory.
 For default configuration see
 [`module.config.php`](https://github.com/mamuz/MamuzContentManager/blob/master/config/module.config.php)
 
-## Creating new Pages
+## Creating a new Page
 
-Create new entities in `MamuzPage` database table.
-Content will be rendered with a markdown parser.
+Create an entity in `MamuzPage` repository.
+
+*Admin Module to provide an interface for that is planned.*
 
 ## Workflow
 
-If routing is successful to a page entity found by published flag and path argument,
-page content will be responsed in a new view model. Otherwise it will set a 404 status code
-to http response object.
+In case of successful routing `page` parameter is used to find a page entity by `path` property.
+If found page is flagged as `published`, `content` will be rendered by a markdown parser and pushed
+to the HTTP-Response object as a new view model,
+otherwise a 404 HTTP status code will be set to the HTTP-Response object.
+
+## Events
+
+For the sake of simplicity `Event` is used for
+FQN [`MamuzContentManager\EventManager\Event`](https://github.com/mamuz/MamuzContentManager/blob/master/src/MamuzContentManager/EventManager/Event.php).
+
+The following events are triggered by `Event::IDENTIFIER` *mamuz-content-manager*:
+
+Name                           | Constant                     | Description
+------------------------------ | ---------------------------- | -----------
+*findPublishedPageByPath.pre*  | `Event::PRE_PAGE_RETRIEVAL`  | Before page retrieval by path
+*findPublishedPageByPath.post* | `Event::POST_PAGE_RETRIEVAL` | After page retrieval by path

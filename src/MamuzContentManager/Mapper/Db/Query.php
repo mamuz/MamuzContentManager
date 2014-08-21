@@ -31,6 +31,19 @@ class Query implements QueryInterface
             return $page;
         }
 
+        $page = $this->getPage($path);
+
+        $this->trigger(Event::POST_PAGE_RETRIEVAL, array('path' => $path, 'page' => $page));
+
+        return $page;
+    }
+
+    /**
+     * @param string $path
+     * @return Page
+     */
+    private function getPage($path)
+    {
         $page = $this->repository->findOneBy(
             array(
                 'path'      => $path,
@@ -41,8 +54,6 @@ class Query implements QueryInterface
         if (null === $page) {
             $page = new NullPage;
         }
-
-        $this->trigger(Event::POST_PAGE_RETRIEVAL, array('path' => $path, 'page' => $page));
 
         return $page;
     }

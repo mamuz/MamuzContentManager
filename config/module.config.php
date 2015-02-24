@@ -8,7 +8,7 @@ return array(
                 'options'       => array(
                     'route'       => '[/:path]',
                     'constraints' => array(
-                        'path' => '[a-zA-Z][/a-zA-Z0-9_-]*',
+                        'path' => '[a-zA-Z][/a-zA-Z0-9_+%-]*',
                     ),
                     'defaults'    => array(
                         'controller' => 'MamuzContentManager\Controller\Query',

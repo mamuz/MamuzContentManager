@@ -17,4 +17,14 @@ class NullPage extends Page
     {
         return self::NULL_CONTENT;
     }
+
+    public function getDescription()
+    {
+        return '';
+    }
+
+    public function getKeywords()
+    {
+        return '';
+    }
 }

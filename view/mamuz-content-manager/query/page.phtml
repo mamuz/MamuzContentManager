@@ -1,6 +1,5 @@
 <?php
 $this->headTitle()->append($this->page->getTitle());
 $this->headMeta()->appendName('description', $this->page->getDescription());
-$this->headMeta()->appendName('keywords', $this->page->getKeywords());
 
 echo $this->markdown($this->page->getContent());

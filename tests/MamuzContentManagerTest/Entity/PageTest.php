@@ -60,15 +60,6 @@ class PageTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($result, $this->fixture);
     }
 
-    public function testMutateAndAccessKeywords()
-    {
-        $expected = 'foo';
-        $this->assertSame('', $this->fixture->getKeywords());
-        $result = $this->fixture->setKeywords($expected);
-        $this->assertSame($expected, $this->fixture->getKeywords());
-        $this->assertSame($result, $this->fixture);
-    }
-
     public function testMutateAndAccessContent()
     {
         $expected = 'foo';

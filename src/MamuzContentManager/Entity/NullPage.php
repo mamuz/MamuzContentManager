@@ -22,9 +22,4 @@ class NullPage extends Page
     {
         return '';
     }
-
-    public function getKeywords()
-    {
-        return '';
-    }
 }

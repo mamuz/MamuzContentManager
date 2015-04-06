@@ -55,17 +55,6 @@ class Page
     private $description = '';
 
     /**
-     * @ORM\Column(type="string", nullable=true)
-     * @Annotation\Filter({"name":"StripTags"})
-     * @Annotation\Filter({"name":"StringTrim"})
-     * @Annotation\Validator({"name":"Alnum", "options": {"allowWhiteSpace":"false"}})
-     * @Annotation\Validator({"name":"StringLength", "options": {"max":"255"}})
-     * @Annotation\Options({"label":"Keywords"})
-     * @var string
-     */
-    private $keywords = '';
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      * @Annotation\Attributes({"type":"text"})
      * @Annotation\Filter({"name":"StripTags"})
@@ -162,24 +151,6 @@ class Page
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * @param string $keywords
-     * @return Page
-     */
-    public function setKeywords($keywords)
-    {
-        $this->keywords = $keywords;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getKeywords()
-    {
-        return $this->keywords;
     }
 
     /**

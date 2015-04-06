@@ -33,9 +33,4 @@ class NullPageTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame('', $this->fixture->getDescription());
     }
-
-    public function testKeywordsAccess()
-    {
-        $this->assertSame('', $this->fixture->getKeywords());
-    }
 }

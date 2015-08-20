@@ -27,7 +27,7 @@ The recommended way to install
 ```json
 {
     "require": {
-        "mamuz/mamuz-content-manager": "0.*"
+        "mamuz/mamuz-content-manager": "*"
     }
 }
 ```
